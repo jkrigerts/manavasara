@@ -1,16 +1,115 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
+import Entry from '../components/Entry.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+	<h1>
+		<span class="wrapped">Skolotāja Jēkaba</span>
+		<span class="wrapped lg">vasara</span>
+	</h1>
+
+	<div class="timeline-body">
+		<Entry
+			title="Skolā pusnaktī"
+			date="22. jūnijs"
+			lead="Pietrūka 5 minūtes līdz rekordam!"
+			href="junijs22"
+		/>
+		<Entry
+			title="Dziesmu svētki"
+			date="1. jūlijs"
+			lead="Jau atvaļinājuma 1. dienas rītā!"
+			href="julijs1"
+		/>
+		<Entry
+			title="Zāģis"
+			date="15. - 16. jūlijs"
+			lead="Jo smagāk, jo labāk"
+			href="julijs15"
+		/>
+		<Entry
+			title="Vītolsvētki"
+			date="29. jūlijs"
+			lead="Vai nometnes ir stilīgas?"
+			href="julijs29"
+		/>
+		<Entry
+			title="Igaunija"
+			date="5. - 6. augusts"
+			lead="Koklēdamis, spēlēdamis"
+			href="augusts5"
+		/>
+		<Entry
+			title="Vētra"
+			date="7. augusts"
+			lead="Pūt, vējiņi! lol"
+			href="augusts7"
+		/>
+		<Entry
+			title="Polija"
+			date="18. - 21. augusts"
+			lead="Pēc mazās Alsas!"
+			href="augusts18"
+		/>
+		<Entry
+			title="Kā?"
+			date="24. - 25. augusts"
+			lead="Mīli, ko dari, un dari, ko mīli"
+			href="augusts24"
+		/>
+		<Entry
+			title="Jānis Zābers"
+			date="27. augusts"
+			lead="Ir tik daudz, ko vēl nezinu"
+			href="augusts27"
+		/>
+	</div>
+</Layout>
+
+<style>
+	
+	.timeline-body {
+    width: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    padding-top: 4rem;
+  }
+
+  .timeline-body::before {
+    content: "";
+    width: 8px;
+    background: linear-gradient(to bottom, rgba(230, 230, 230, 0) 0%, var(--primary-color) 10%, var(--primary-color) 90%, rgba(230, 230, 230, 0) 100%);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5;
+    margin: auto;
+  }
+
+  @media (max-width: 699px) {
+    .timeline-body::before {
+      margin: 0 0 0 30px;
+    }
+  }
+
+	.wrapped {
+		display: block;
+	}
+
+	h1 {
+		font-size: 3rem;
+		text-align: center;
+		margin: 5rem 0;
+	}
+	h1 .lg {
+		font-size: 6.5rem;
+		letter-spacing: 1rem;
+		transform: translateX(10px);
+		line-height: 0.5;
+	}
+</style>

@@ -1,0 +1,58 @@
+---
+import { Image } from 'astro:assets';
+import Image1 from '../images/Augusts5.jpg';
+import Layout from "../layouts/Layout.astro";
+
+---
+
+<Layout>
+  <h4 transition:name="augusts5-title">Igaunija</h4>
+  <p class="story">Vai mūzikas un muzicēšanas var būt par daudz?
+    Vai Peipuss ir ezers, vai tomēr jūra? Vai Munameģis ir augstāks
+    nekā Gaiziņš? Vasaras vidū iesaistījos koklētāju ansamblī
+    kā dziedātājs, stabulnieks un bundzinieks. Tā rezultātā nokļuvu
+    Igaunijā!
+  </p>
+  <div class="image-wrapper">
+    <div class="img-sizer"><Image src={Image1} alt="Skaists skats Igaunijā" height="440"/>
+  </div>
+  <div class="img-sizer">
+    <video autoplay loop height="460">
+      <source src="/video/augusts5.mp4" type="video/mp4" />
+    </video>
+  <div>
+  </div>
+</Layout>
+
+<style>
+  .image-wrapper {
+    margin-top: 2rem;
+    display: flex;
+    height: 400px;
+    justify-content: space-between;
+  }
+
+  img {
+    width:100%;
+    object-fit: cover;
+
+  }
+
+  h4 {
+    text-align: right;
+  }
+  p {
+    text-align: right;
+  }
+
+  video, img {
+    width: 100%;
+    height:100%;
+    object-fit:cover;
+  }
+
+  .img-sizer {
+    width: 49%;
+    height: 100%;
+  }
+</style>

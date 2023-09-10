@@ -1,0 +1,38 @@
+---
+import { Image } from 'astro:assets';
+import Image1 from '../images/Julijs1-1.jpg';
+import Image2 from '../images/Julijs1-2.jpg';
+import Image3 from '../images/Julijs1-3.jpg';
+import Layout from "../layouts/Layout.astro";
+
+---
+
+<Layout>
+  <audio autoplay src="https://manavasara.blob.core.windows.net/manavasara/julijs1.mp3?sp=r&st=2023-09-10T10:23:29Z&se=2023-09-10T18:23:29Z&sv=2022-11-02&sr=b&sig=9lPOCG7u1lR%2BvG47M3vp7i%2BZGZkYzMiQgud0VSKPGRU%3D" loop="loop"></audio>
+  <h4 transition:name="julijs1-title">Dziesmu svētki</h4>
+  <p class="story">No 1. jūlija līdz 10. jūlijam biju <em>Dziesmu un deju
+    svētkos</em>, kur piedalījos gan ar jaukto kori <em>Cesvaine</em>, gan
+    vokālo ansambli <em>Rondo</em>. Režīms bija ļoti saspringts, taču
+    pretī saņēmu daudz sirsnīgu vaibu.
+  </p>
+  <div class="image-wrapper">
+    <div class="img-sizer"><Image src={Image1} alt="Jēkabs 22. jūnija pusnaktī." height="500"/></div>
+    <div class="img-sizer"><Image src={Image2} alt="Jēkabs 22. jūnija pusnaktī." height="500"/></div>
+    <div class="img-sizer"><Image src={Image3} alt="Jēkabs 22. jūnija pusnaktī." height="500"/></div>
+  </div>
+</Layout>
+
+<style>
+  .image-wrapper {
+    margin-top: 2rem;
+    display: flex;
+    height: 200px;
+    justify-content: space-between;
+  }
+
+  img {
+    width:100%;
+    object-fit: cover;
+
+  }
+</style>

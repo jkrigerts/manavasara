@@ -1,0 +1,41 @@
+---
+import { Image } from 'astro:assets';
+import Image1 from '../images/Augusts18.jpg';
+import Layout from "../layouts/Layout.astro";
+
+---
+
+<Layout>
+  <audio autoplay src="/audio/augusts18.mp3" loop="loop"></audio>
+
+  <div class="container">
+      <Image src={Image1} alt="Alsa pie jūras Polijā" width="500"/>
+    <div>
+      <h4 transition:name="augusts18-title">Polija</h4>
+      <p class="story">Alsa - borderkolliju meitenīte - uzauga Polijas pilsētā
+        Pyrzyce - 180 km no Berlīnes. Lai viņu atvestu mājās,
+        pārvarējām 2340 km, iztērējām tikai 105 EUR autogāzē,
+        un uzzinājām, ka Polija var būt sirsnīga tūrisma valsts!
+        Fonā dzirdams nejaušs poļu jauneklis, kurš uzstājās
+        kādā Olsztyn vecpilsētas krodziņā.
+        
+      </p>
+    </div>
+  </div>
+  
+</Layout>
+
+<style>
+  h4 {
+    text-align: right;
+  }
+  p {
+    text-align: right;
+  }
+
+  .container {
+    display:flex;
+    gap: 4rem;
+  }
+
+</style>

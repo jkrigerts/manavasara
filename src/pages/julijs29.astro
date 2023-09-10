@@ -1,0 +1,35 @@
+---
+import { Image } from 'astro:assets';
+import Image1 from '../images/Julijs29-1.jpg';
+import Image2 from '../images/Julijs29-2.jpg';
+import Layout from "../layouts/Layout.astro";
+
+---
+
+<Layout>
+  <audio autoplay src="/audio/julijs29.mp3" loop="loop"></audio>
+  <h4 transition:name="julijs29-title">Vītolsvētki</h4>
+  <p class="story">Atzīmējot Jāzepa Vītola 150 gadu jubileju, dziedāju
+    Vītolsvētkos Gaujienā, kur arī noslēdzās Vītolēnu nometne. Es bērnībā, skolas
+    gados nebiju nevienā nometnē, tāpēc todien aizdomājos - nez, kā tas ir..?
+  </p>
+  <div class="image-wrapper">
+    <div class="img-sizer"><Image src={Image1} alt="Jēkabs dzied Vītolsvētkos" height="400"/></div>
+    <div class="img-sizer"><Image src={Image2} alt="Vītola māja no augšas" height="400"/></div>
+  </div>
+</Layout>
+
+<style>
+  .image-wrapper {
+    margin-top: 2rem;
+    display: flex;
+    height: 200px;
+    justify-content: space-between;
+  }
+
+  img {
+    width:100%;
+    object-fit: cover;
+
+  }
+</style>

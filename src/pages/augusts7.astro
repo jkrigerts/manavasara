@@ -1,0 +1,36 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+---
+
+<Layout>
+  <div class="container">
+    <div>
+      <h4 id="click" transition:name="augusts7-title">Vētra</h4>
+      <p class="story">Noskaties video... 
+      </p>
+    </div>
+    <div class="img-wrapper">
+      <video autoplay loop width="920" controls>
+        <source src="/video/augusts7.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </div>
+  
+</Layout>
+
+<!-- <script is:inline>
+  document.getElementById("click").addEventListener("click", () => {
+    history.back();
+  })
+</script> -->
+
+<style>
+
+  .container {
+    display:flex;
+    flex-direction:column;
+    gap: 2rem;
+  }
+
+</style>

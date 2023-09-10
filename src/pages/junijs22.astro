@@ -1,0 +1,38 @@
+---
+import { Image } from 'astro:assets';
+import Junijs221 from '../images/Junijs22.jpg';
+import Layout from "../layouts/Layout.astro";
+
+---
+
+<Layout>
+  <audio autoplay src="/audio/junijs22.mp3" loop="loop"></audio>
+
+  <div class="container">
+      <Image src={Junijs221} alt="Jēkabs 22. jūnija pusnaktī." width="500"/>
+    <div>
+      <h4 transition:name="junijs22-title">Skolā pusnaktī</h4>
+      <p class="story">22. jūnijā notika <em>Programmēšanas tehniķu</em> kvalifikācijas eksāmens.
+        Smieklīgi, ka testa daļu bija jāpilda uz papīra, jo valsts sistēma nobrukusi.
+        Tā nu komisija laboja darbus tieši līdz pusnaktij, tomēr VTDT kvalifikācijas
+        darbu labošanas rekordilgums ir līdz nākošās dienas  00:05. Tā rekodu nepārsitām.
+      </p>
+    </div>
+  </div>
+  
+</Layout>
+
+<style>
+  h4 {
+    text-align: right;
+  }
+  p {
+    text-align: right;
+  }
+
+  .container {
+    display:flex;
+    gap: 4rem;
+  }
+
+</style>

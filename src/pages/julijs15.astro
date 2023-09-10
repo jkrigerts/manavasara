@@ -1,0 +1,46 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+---
+
+<Layout>
+  <audio autoplay src="/audio/julijs15.mp3" loop="loop"></audio>
+
+  <div class="container">
+    <div class="img-wrapper">
+      <video autoplay muted loop width="560">
+        <source src="/video/julijs15.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div>
+      <h4 id="click" transition:name="julijs15-title">Zāģis</h4>
+      <p class="story">Es nezinu, kāpēc tevi tur nesatiku, tomēr 15. - 16. jūlijā
+        tepat Vaivē bija roka / metāla festivāls <em>Zāģis</em>. Lielākā daļa cilvēku,
+        lai arī apmeklētāji kādi 300, viens otru zināja, tāpēc ļoti droša atmosfēra.
+        Tiekās nākošgad!
+      </p>
+    </div>
+  </div>
+  
+</Layout>
+
+<!-- <script is:inline>
+  document.getElementById("click").addEventListener("click", () => {
+    history.back();
+  })
+</script> -->
+
+<style>
+  h4 {
+    text-align: right;
+  }
+  p {
+    text-align: right;
+  }
+
+  .container {
+    display:flex;
+    gap: 4rem;
+  }
+
+</style>

@@ -1,0 +1,100 @@
+---
+import ScheduleIcon from './ScheduleIcon.astro';
+
+interface Props {
+	title: string;
+	date: string;
+  lead: string;
+	href: string;
+}
+
+const { title, date, lead, href } = Astro.props;
+---
+
+<div class="timeline-entry">
+  <div class="year">
+    <h3>{date}</h3>
+  </div>
+  <div class="icon">
+    <div class="icon-wrapper">
+      <ScheduleIcon />
+    </div>
+  </div>
+  <a class="desc" href={href}>
+      <h4 transition:name={`${href}-title`}>{title}</h4>
+      <p>{lead}</p>
+  </a>
+</div>
+
+<style>
+  .timeline-entry {
+    display: flex;
+    justify-content: start;
+    margin-bottom: 6rem;
+    width: 100%;
+  }
+
+  .year {
+    order: 1;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    justify-content:right;
+  }
+
+  .icon {
+    order: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+
+  .icon-wrapper {
+    background: linear-gradient(90deg,var(--primary-color),var(--secondary-color));
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .desc {
+    order: 3;
+    width: 50%;
+    padding-left: 40px;
+    padding-right: 20px;
+    text-decoration: none;
+    color: var(--primary-color);
+  }
+
+  .timeline-entry:nth-child(odd) .year {
+    order: 3;
+    justify-content:left;
+  }
+
+  .timeline-entry:nth-child(odd) .desc {
+    order: 1;
+    text-align: right;
+    padding-left: 20px;
+    padding-right: 40px;
+  }
+
+  .desc h4 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .year h3 {
+    font-size: 2rem;
+    font-weight: 300;
+  }
+  
+  p {
+
+    color: var(--text-color-darker);
+  }
+
+</style>

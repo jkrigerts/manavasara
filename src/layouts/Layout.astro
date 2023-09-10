@@ -1,0 +1,111 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+
+---
+
+<!doctype html>
+<html lang="lv">
+	<head  transition:animate="none">
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Skolotāja Jēkaba vasara</title>
+		<ViewTransitions />
+	</head>
+	<body>
+		<main>
+			<slot />
+		</main>
+		
+	</body>
+</html>
+<style is:global>
+	@font-face {
+  	font-family: 'Inter';
+  	src: url('/fonts/Inter.ttf') format('ttf');
+	}
+
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	:root {
+		--background-color: #080808;
+		--text-color: #fff;
+		--text-color-darker: #ccc;
+		--primary-color: rgb(0, 208, 255);
+		--secondary-color: rgb(0, 145, 255);
+	}
+	html {
+		font-family: 'Inter', system-ui, sans-serif;
+		color: var(--text-color);
+	}
+
+	body {
+		background-color: var(--background-color);
+	}
+
+	main {
+		margin: 40px 40px;
+	}
+
+	h4 {
+    font-size: 5rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+  }
+
+	p {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+
+	a {
+		text-decoration:none;
+		color: var(--text-color);
+	}
+
+	audio {
+    display:none;
+  }
+
+	.story {
+    animation-duration: 2s;
+    animation-name: slidein;
+		animation-fill-mode: forwards;
+  }
+
+
+  @keyframes slidein {
+    from {
+      transform: translateX(-5vw);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  img, video {
+    animation-duration: 1s;
+    animation-name: scale;
+    animation-timing-function: cubic-bezier(.17,.67,.8,1.23);
+  }
+
+  @keyframes scale {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+</style>

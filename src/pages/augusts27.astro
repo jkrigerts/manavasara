@@ -1,0 +1,49 @@
+---
+import { Image } from 'astro:assets';
+import Image1 from '../images/Augusts27-1.png';
+import Image2 from '../images/Augusts27-2.jpg';
+import Image3 from '../images/Augusts27-3.jpg';
+import Layout from "../layouts/Layout.astro";
+
+---
+
+<Layout>
+  <audio autoplay src="/audio/augusts27.mp3" loop="loop"></audio>
+  <h4 transition:name="augusts27-title">Jānis Zābers</h4>
+  <p class="story">27. augusta rītā man nemaz negribējās braukt uz
+    <em>Veco Cepli</em> - Jāņa Zābera dzimtajām mājām Aiviekstes
+    krastā Lubānas pusē. Kas viņš tāds vispār? It kā dzirdēts, bet
+    nekad nesadzirdēts. Un tad viņa piemiņas muzejā es uzzināju...
+  </p>
+  <div class="image-wrapper">
+    <div class="img-sizer"><Image src={Image1} alt="Jēkabs spēlē trompeti" height="460"/></div>
+    <div class="img-sizer"><Image src={Image2} alt="Rondo pie Jāņa Zābera ozola" height="460"/></div>
+    <div class="img-sizer"><Image src={Image3} alt="Jānis Zābers operā Salome" height="460"/></div>
+  </div>
+</Layout>
+
+<style>
+  h4 {
+    text-align: right;
+  }
+  p {
+    text-align: right;
+  }
+  
+  .image-wrapper {
+    margin-top: 2rem;
+    display: flex;
+    height: 200px;
+    justify-content: space-between;
+  }
+
+  .img-sizer {
+    width: 32%;
+  }
+
+  img {
+    width:100%;
+    object-fit: cover;
+
+  }
+</style>

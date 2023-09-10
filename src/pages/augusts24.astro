@@ -1,0 +1,33 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+---
+
+<Layout>
+  <div class="container">
+    <div>
+      <h4 id="click" transition:name="augusts24-title">Kā?</h4>
+      <p class="story">Mazliet arī ir jāpstrādā, vai ne?
+        <em>Draugiem Group</em> mentoru klubs mani uzaicināja būt
+        kā viesekspertam <em>Kā uzņēmējiem iesaistīties izglītībā</em>?
+        Bija ļoti nice. Kā jau <em>Draugiem Group</em>.
+      </p>
+    </div>
+    <div class="img-wrapper">
+      <video autoplay loop width="860" controls>
+        <source src="/video/augusts24.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </div>
+  
+</Layout>
+
+<style>
+
+  .container {
+    display:flex;
+    flex-direction:column;
+    gap: 2rem;
+  }
+
+</style>
